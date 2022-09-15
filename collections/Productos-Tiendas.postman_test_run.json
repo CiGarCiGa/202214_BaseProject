@@ -1,0 +1,327 @@
+{
+	"id": "df5d6726-2566-4d6b-a6ac-296f6dc5acae",
+	"name": "Productos-Tiendas",
+	"timestamp": "2022-09-15T13:14:48.165Z",
+	"collection_id": "5836993-5f22e471-4e72-4466-a3a1-e1e258eb2995",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 14,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "60a8a65b-cf23-4533-ad3f-9302a9ca2ac1",
+			"name": "Agregar una nueva tienda a las oferentes de un producto.",
+			"url": "http://localhost:3000/api/v1/productos/12408828-aa0a-462d-900f-a65946137afa/tiendas/b79c8c92-f323-4417-875c-3127a4cf02ec",
+			"time": 18,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "93c764ba-39df-4978-98e8-36ff2cbe2fb5",
+			"name": "Asociar una tienda que no existe a las oferentes de un producto.",
+			"url": "http://localhost:3000/api/v1/productos/12408828-aa0a-462d-900f-a65946137afa/tiendas/00000000-0000-0000-0000-000000000000",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Get expected error message": true
+				}
+			]
+		},
+		{
+			"id": "ab9dab8e-5b6d-4168-b40b-15233dc7b84e",
+			"name": "Obtener todas las tiendas que ofrecen un producto.",
+			"url": "http://localhost:3000/api/v1/productos/12408828-aa0a-462d-900f-a65946137afa/tiendas",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Number of tiendas > 0": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Number of tiendas > 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Number of tiendas > 0": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "84695e9f-19e2-4f26-a0bb-32e848e93995",
+			"name": "Obtener una tienda que ofrece un producto.",
+			"url": "http://localhost:3000/api/v1/productos/12408828-aa0a-462d-900f-a65946137afa/tiendas/b79c8c92-f323-4417-875c-3127a4cf02ec",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ab185a4c-061a-465b-b8a1-5a945b0442f5",
+			"name": "Obtener una tienda que ofrece un producto que no existe.",
+			"url": "http://localhost:3000/api/v1/productos/00000000-0000-0000-0000-000000000000/tiendas/b79c8c92-f323-4417-875c-3127a4cf02ec",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Get expected error message": true
+				}
+			]
+		},
+		{
+			"id": "7f232fce-f762-4af1-ae0d-efebfe833422",
+			"name": "Actualizar las tiendas que ofrecen un producto.",
+			"url": "http://localhost:3000/api/v1/productos/12408828-aa0a-462d-900f-a65946137afa/tiendas",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "98baea9f-c9f0-47a0-bab1-4549fcad66de",
+			"name": "Actualizar las tiendas que ofrecen un producto, con una tienda inexistente.",
+			"url": "http://localhost:3000/api/v1/productos/12408828-aa0a-462d-900f-a65946137afa/tiendas",
+			"time": 22,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				22
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Get expected error message": true
+				}
+			]
+		},
+		{
+			"id": "31819cf2-bbac-4fbf-9428-705d6b24276c",
+			"name": "Eliminar una tienda que ofrece un producto.",
+			"url": "http://localhost:3000/api/v1/productos/12408828-aa0a-462d-900f-a65946137afa/tiendas/b79c8c92-f323-4417-875c-3127a4cf02ec",
+			"time": 18,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		},
+		{
+			"id": "29638147-2ecf-4cfa-a6d7-c76dd832d295",
+			"name": "Eliminar una tienda que no ofrece un producto",
+			"url": "http://localhost:3000/api/v1/productos/00000000-0000-0000-0000-000000000000/tiendas/b79c8c92-f323-4417-875c-3127a4cf02ec",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Get expected error message": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 108,
+	"collection": {
+		"requests": [
+			{
+				"id": "60a8a65b-cf23-4533-ad3f-9302a9ca2ac1",
+				"method": "POST"
+			},
+			{
+				"id": "93c764ba-39df-4978-98e8-36ff2cbe2fb5",
+				"method": "POST"
+			},
+			{
+				"id": "ab9dab8e-5b6d-4168-b40b-15233dc7b84e",
+				"method": "GET"
+			},
+			{
+				"id": "84695e9f-19e2-4f26-a0bb-32e848e93995",
+				"method": "GET"
+			},
+			{
+				"id": "ab185a4c-061a-465b-b8a1-5a945b0442f5",
+				"method": "GET"
+			},
+			{
+				"id": "7f232fce-f762-4af1-ae0d-efebfe833422",
+				"method": "PUT"
+			},
+			{
+				"id": "98baea9f-c9f0-47a0-bab1-4549fcad66de",
+				"method": "PUT"
+			},
+			{
+				"id": "31819cf2-bbac-4fbf-9428-705d6b24276c",
+				"method": "DELETE"
+			},
+			{
+				"id": "29638147-2ecf-4cfa-a6d7-c76dd832d295",
+				"method": "DELETE"
+			}
+		]
+	}
+}

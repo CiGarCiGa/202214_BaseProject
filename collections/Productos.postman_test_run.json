@@ -1,0 +1,327 @@
+{
+	"id": "04af9119-8a85-4099-bbbe-e52024181f22",
+	"name": "Productos",
+	"timestamp": "2022-09-15T13:14:26.651Z",
+	"collection_id": "5836993-a1c963ff-5d8f-4530-9868-d30220df1d12",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 14,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1dc0c01b-2820-4dc5-979d-5099359023cd",
+			"name": "Crear un producto válido",
+			"url": "http://localhost:3000/api/v1/productos",
+			"time": 60,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				60
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "b0d7533b-d3fb-44e9-af40-63026be831f3",
+			"name": "Crear un producto inválido",
+			"url": "http://localhost:3000/api/v1/productos",
+			"time": 4,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Status code is 412": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 412": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 412": true,
+					"Get expected error message": true
+				}
+			]
+		},
+		{
+			"id": "7a4f0d5a-8cb4-4c39-894d-4721303d1020",
+			"name": "Obtener todos los productos",
+			"url": "http://localhost:3000/api/v1/productos",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Number of productos > 0": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Number of productos > 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Number of productos > 0": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "edbad7fe-e513-489b-af5a-280740b59179",
+			"name": "Obtener un producto por ID",
+			"url": "http://localhost:3000/api/v1/productos/08a5268b-dddc-42fc-bd60-c58e874a6dde",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "f599de24-d860-4f71-84fd-f20c373e394c",
+			"name": "Obtener un producto por un ID que no existe",
+			"url": "http://localhost:3000/api/v1/productos/00000000-0000-0000-0000-000000000000",
+			"time": 6,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Get expected error message": true
+				}
+			]
+		},
+		{
+			"id": "5693d72b-c6f8-4282-ad8c-2745a36ac497",
+			"name": "Actualizar un producto.",
+			"url": "http://localhost:3000/api/v1/productos/08a5268b-dddc-42fc-bd60-c58e874a6dde",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "5fbd07d0-a115-409b-ba16-82ba654a23b0",
+			"name": "Actualizar un producto con un ID que no existe.",
+			"url": "http://localhost:3000/api/v1/productos/00000000-0000-0000-0000-000000000000",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Get expected error message": true
+				}
+			]
+		},
+		{
+			"id": "5c11ae20-4c1c-47c8-8d77-d628ff852aa2",
+			"name": "Eliminar un producto por su ID.",
+			"url": "http://localhost:3000/api/v1/productos/08a5268b-dddc-42fc-bd60-c58e874a6dde",
+			"time": 6,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		},
+		{
+			"id": "0d5c6feb-f7c9-4057-b260-814e6edaded2",
+			"name": "Eliminar un producto con un ID que no existe.",
+			"url": "http://localhost:3000/api/v1/productos/00000000-0000-0000-0000-000000000000",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Get expected error message": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 111,
+	"collection": {
+		"requests": [
+			{
+				"id": "1dc0c01b-2820-4dc5-979d-5099359023cd",
+				"method": "POST"
+			},
+			{
+				"id": "b0d7533b-d3fb-44e9-af40-63026be831f3",
+				"method": "POST"
+			},
+			{
+				"id": "7a4f0d5a-8cb4-4c39-894d-4721303d1020",
+				"method": "GET"
+			},
+			{
+				"id": "edbad7fe-e513-489b-af5a-280740b59179",
+				"method": "GET"
+			},
+			{
+				"id": "f599de24-d860-4f71-84fd-f20c373e394c",
+				"method": "GET"
+			},
+			{
+				"id": "5693d72b-c6f8-4282-ad8c-2745a36ac497",
+				"method": "PUT"
+			},
+			{
+				"id": "5fbd07d0-a115-409b-ba16-82ba654a23b0",
+				"method": "PUT"
+			},
+			{
+				"id": "5c11ae20-4c1c-47c8-8d77-d628ff852aa2",
+				"method": "DELETE"
+			},
+			{
+				"id": "0d5c6feb-f7c9-4057-b260-814e6edaded2",
+				"method": "DELETE"
+			}
+		]
+	}
+}
