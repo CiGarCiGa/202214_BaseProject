@@ -1,0 +1,312 @@
+{
+	"id": "36bb9604-0858-4fe4-b4d1-47a6e96a2856",
+	"name": "Tiendas",
+	"timestamp": "2022-09-15T13:14:57.148Z",
+	"collection_id": "5836993-5fc92b26-2dd4-420e-8f11-781a2d75bdca",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 12,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "21d588c9-7760-4046-9ecd-391511225b08",
+			"name": "Crear una tienda válida.",
+			"url": "http://localhost:3000/api/v1/tiendas",
+			"time": 19,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "956bd6cf-4529-4b43-bb35-cb5859b1321f",
+			"name": "Crear una tienda inválida.",
+			"url": "http://localhost:3000/api/v1/tiendas",
+			"time": 4,
+			"responseCode": {
+				"code": 412,
+				"name": "Precondition Failed"
+			},
+			"tests": {
+				"Status code is 412": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 412": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 412": true,
+					"Get expected error message": true
+				}
+			]
+		},
+		{
+			"id": "b8a83381-e25e-44de-8ae5-7a7b90b10465",
+			"name": "Obtener todas las tiendas.",
+			"url": "http://localhost:3000/api/v1/tiendas",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "91618fcd-3fba-4fa3-8707-0fd640f457a9",
+			"name": "Obtener una tienda por ID",
+			"url": "http://localhost:3000/api/v1/tiendas/82a40642-3817-466f-b82f-1f22840cb4dd",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "4351e923-5c05-478b-8261-a43d474c987a",
+			"name": "Obtener una tienda por un ID que no existe.",
+			"url": "http://localhost:3000/api/v1/tiendas/00000000-0000-0000-0000-000000000000",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Get expected error message": true
+				}
+			]
+		},
+		{
+			"id": "411d1f9b-70b9-4939-b813-d7dd7edec00c",
+			"name": "Actualizar una tienda.",
+			"url": "http://localhost:3000/api/v1/tiendas/82a40642-3817-466f-b82f-1f22840cb4dd",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "90eb367c-0af1-4feb-8bdd-bbfa53be021b",
+			"name": "Actualizar una tienda con un ID que no existe.",
+			"url": "http://localhost:3000/api/v1/tiendas/00000000-0000-0000-0000-000000000000",
+			"time": 7,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Get expected error message": true
+				}
+			]
+		},
+		{
+			"id": "e2dee0b9-6daa-4098-b70b-6b487acaf81d",
+			"name": "Eliminar una tienda por su ID.",
+			"url": "http://localhost:3000/api/v1/tiendas/82a40642-3817-466f-b82f-1f22840cb4dd",
+			"time": 13,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		},
+		{
+			"id": "ad65644f-d315-40a9-9f25-1353324abf24",
+			"name": "Eliminar una tienda con un ID que no existe.",
+			"url": "http://localhost:3000/api/v1/tiendas/00000000-0000-0000-0000-000000000000",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Get expected error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Get expected error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Get expected error message": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 72,
+	"collection": {
+		"requests": [
+			{
+				"id": "21d588c9-7760-4046-9ecd-391511225b08",
+				"method": "POST"
+			},
+			{
+				"id": "956bd6cf-4529-4b43-bb35-cb5859b1321f",
+				"method": "POST"
+			},
+			{
+				"id": "b8a83381-e25e-44de-8ae5-7a7b90b10465",
+				"method": "GET"
+			},
+			{
+				"id": "91618fcd-3fba-4fa3-8707-0fd640f457a9",
+				"method": "GET"
+			},
+			{
+				"id": "4351e923-5c05-478b-8261-a43d474c987a",
+				"method": "GET"
+			},
+			{
+				"id": "411d1f9b-70b9-4939-b813-d7dd7edec00c",
+				"method": "PUT"
+			},
+			{
+				"id": "90eb367c-0af1-4feb-8bdd-bbfa53be021b",
+				"method": "PUT"
+			},
+			{
+				"id": "e2dee0b9-6daa-4098-b70b-6b487acaf81d",
+				"method": "DELETE"
+			},
+			{
+				"id": "ad65644f-d315-40a9-9f25-1353324abf24",
+				"method": "DELETE"
+			}
+		]
+	}
+}
