@@ -109,7 +109,6 @@ export class ProductoTiendaService {
         'The producto with the given id was not found',
         BusinessError.NOT_FOUND,
       );
-    console.log(JSON.stringify(tiendas));
     for (let i = 0; i < tiendas.length; i++) {
       const tienda: TiendaEntity = await this.tiendaRepository.findOne({
         where: { id: tiendas[i].id },
